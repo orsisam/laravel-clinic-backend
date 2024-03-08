@@ -22,4 +22,10 @@
     <!-- JS Libraies -->
 
     <!-- Page Specific JS File -->
+    <script>
+        function toLogout() {
+            event.preventDefault();
+            document.getElementById('logout-form').submit();
+        }
+    </script>
 @endpush

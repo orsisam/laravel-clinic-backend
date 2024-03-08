@@ -72,6 +72,14 @@
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+
+    {{-- User Script --}}
+    <script>
+        function toLogout() {
+            event.preventDefault();
+            document.getElementById('logout-form').submit();
+        }
+    </script>
 </body>
 
 </html>

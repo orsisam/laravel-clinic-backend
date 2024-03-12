@@ -12,13 +12,19 @@
                     href="{{ route('home') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
             </li>
     
-            <li class="nav-item dropdown {{ Route::is('users.*') ? 'active' : '' }}">
+            <li class="nav-item dropdown ">
                 <a href="#"
-                    class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Users</span></a>
-                <ul class="dropdown-menu">
+                    class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Users</span></a>
+                <ul class="dropdown-menu {{ Route::is('users.*') ? 'active' : '' }}">
                     <li class="">
                         <a class="nav-link"
                             href="{{ route('users.index') }}"><i class="fas fa-user"></i> <span>User</span></a>
+                    </li>
+                </ul>
+                <ul class="dropdown-menu {{ Route::is('doctors.*') ? 'active' : '' }}">
+                    <li class="">
+                        <a class="nav-link"
+                            href="{{ route('doctors.index') }}"><i class="fas fa-stethoscope"></i> <span>Doctor</span></a>
                     </li>
                 </ul>
             </li>

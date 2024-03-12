@@ -11,12 +11,20 @@
                 <a class="nav-link"
                     href="{{ route('home') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
             </li>
-        </ul>
-        <ul class="sidebar-menu">
-            <li class="{{ Route::is('users.*') ? 'active' : '' }}">
-                <a class="nav-link"
-                    href="{{ route('users.index') }}"><i class="fas fa-user"></i> <span>User</span></a>
+    
+            <li class="nav-item dropdown {{ Route::is('users.*') ? 'active' : '' }}">
+                <a href="#"
+                    class="nav-link has-dropdown "><i class="fas fa-fire"></i><span>Users</span></a>
+                <ul class="dropdown-menu">
+                    <li class="">
+                        <a class="nav-link"
+                            href="{{ route('users.index') }}"><i class="fas fa-user"></i> <span>User</span></a>
+                    </li>
+                </ul>
             </li>
+
+
+            
         </ul>
 
         <div class="hide-sidebar-mini mt-4 mb-4 p-3">

@@ -32,5 +32,10 @@ class DatabaseSeeder extends Seeder
             'doctor_name' => 'Prof. Dr. ismail bin Mail',
             'clinic_code' => '0199200388PX',
         ]);
+
+        // call other seeder
+        $this->call([
+            DoctorSeeder::class,
+        ]);
     }
 }
